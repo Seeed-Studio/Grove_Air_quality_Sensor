@@ -1,9 +1,9 @@
 /*
   AirQuality library v1.0
   2010 Copyright (c) Seeed Technology Inc.  All right reserved.
- 
+
   Original Author: Bruce.Qin
-  
+
   This library is free software; you can redistribute it and/or
   modify it under the terms of the GNU Lesser General Public
   License as published by the Free Software Foundation; either
@@ -33,10 +33,11 @@ public:
     int counter;
     boolean timer_index;
     boolean error;
-    void init(int pin);
+    void init(int pin, int pin2);
     int slope(void);
 private:
     int _pin;
+    int _pin2;
     void avgVoltage(void);
 };
 #endif
