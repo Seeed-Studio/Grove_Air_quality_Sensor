@@ -10,7 +10,7 @@ int current_quality =-1;
 void setup()
 {
     Serial.begin(9600);
-    airqualitysensor.init(14);
+    airqualitysensor.init(A0);
 }
 void loop()
 {

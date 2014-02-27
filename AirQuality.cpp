@@ -39,10 +39,9 @@ void AirQuality::avgVoltage()
 		i++;
 	}
 }
-void AirQuality::init(int pin, int pin2)
+void AirQuality::init(int pin)
 {
     _pin=pin;
-    _pin2=pin2;
     pinMode(_pin,INPUT);
     unsigned char i=0;
     Serial.println("sys_starting...");
@@ -54,7 +53,7 @@ void AirQuality::init(int pin, int pin2)
     {
         if(init_voltage<798 && init_voltage>10)// the init voltage is ok
         {
-            first_vol=analogRead(_pin2);//initialize first value
+            first_vol=analogRead(_pin);//initialize first value
             last_vol=first_vol;
             vol_standard=last_vol;
             Serial.println("Sensor ready.");
@@ -66,7 +65,7 @@ void AirQuality::init(int pin, int pin2)
             i++;
             delay(60000);//60000
             Serial.println("waitting sensor init..");
-            init_voltage=analogRead(_pin2);
+            init_voltage=analogRead(_pin);
             if(i==5)
             {
                 i=0;

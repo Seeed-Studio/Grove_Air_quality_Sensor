@@ -33,11 +33,10 @@ public:
     int counter;
     boolean timer_index;
     boolean error;
-    void init(int pin, int pin2);
+    void init(int pin);
     int slope(void);
 private:
     int _pin;
-    int _pin2;
     void avgVoltage(void);
 };
 #endif
