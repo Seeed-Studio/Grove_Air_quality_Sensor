@@ -25,19 +25,19 @@
 
 void AirQuality::avgVoltage()
 {
-	if(i==150)//sum 5 minutes
-	{
-		vol_standard=temp/150;
-		temp=0;
-		Serial.print("Vol_standard in 5 minutes:");
-		Serial.println(vol_standard);
-		i=0;
-	}
+    if(i==150)//sum 5 minutes
+    {
+        vol_standard=temp/150;
+        temp=0;
+        Serial.print("Vol_standard in 5 minutes:");
+        Serial.println(vol_standard);
+        i=0;
+    }
     else
-	{
-		temp+=first_vol;
-		i++;
-	}
+    {
+        temp+=first_vol;
+        i++;
+    }
 }
 void AirQuality::init(int pin)
 {
@@ -85,16 +85,16 @@ void AirQuality::init(int pin)
 }
 int AirQuality::slope(void)
 {
-  while(timer_index)
-	{
-    	if(first_vol-last_vol>400||first_vol>700)
+    while(timer_index)
+    {
+        if(first_vol-last_vol>400||first_vol>700)
         {
             Serial.println("High pollution! Force signal active.");
             timer_index=0;
             avgVoltage();
             return 0;
         }
-    	else if((first_vol-last_vol>400&&first_vol<700)||first_vol-vol_standard>150)
+        else if((first_vol-last_vol>400&&first_vol<700)||first_vol-vol_standard>150)
         {
             Serial.print("sensor_value:");
             Serial.print(first_vol);
@@ -104,7 +104,7 @@ int AirQuality::slope(void)
             return 1;
 
         }
-    	else if((first_vol-last_vol>200&&first_vol<700)||first_vol-vol_standard>50)
+        else if((first_vol-last_vol>200&&first_vol<700)||first_vol-vol_standard>50)
         {
             //Serial.println(first_vol-last_vol);
             Serial.print("sensor_value:");
@@ -114,7 +114,7 @@ int AirQuality::slope(void)
             avgVoltage();
             return 2;
         }
-    	else
+        else
         {
             avgVoltage();
             Serial.print("sensor_value:");
@@ -123,7 +123,7 @@ int AirQuality::slope(void)
             timer_index=0;
             return 3;
         }
-	}
+    }
     return -1;
 }
 
