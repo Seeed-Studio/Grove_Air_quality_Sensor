@@ -29,7 +29,7 @@ public:
     int init_voltage;
     int first_vol;
     int last_vol;
-    int temp;
+    long temp;
     int counter;
     boolean timer_index;
     boolean error;
