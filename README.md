@@ -1,13 +1,15 @@
-Grove Air Quality Sensor
+## Grove Air Quality Sensor
 -------------------------------------------------------------
-![image](http://www.seeedstudio.com/wiki/images/1/15/Grove_-_Air_quality_sensor.jpg)
+![](https://statics3.seeedstudio.com/images/101020021%201.jpg)
+
+[Grove Air Quality Sensor](https://www.seeedstudio.com/Grove-Air-quality-sensor-p-1065.html)
 
 This sensor is designed for comprehensive monitor over indoor air condition.
 It's responsive to a wide scope of harmful gases, as carbon monixide, alcohol, acetone, thinner, formaldehyde and so on.
 Due to the measuring mechanism, this sensor can not output specific data to describe target gases' concentrations quantitatively.
 But it's still competent enough to be used in applications that require only qualitative results, like auto refresher sprayers and auto air cycling systems.
 
-For more information, please refer to [Grove_Air_Quality_Sensor][1]
+For more information, please refer to [wiki page][1]
 
 ----
 This software is written by Bruce Qin for seeed studio<br>
