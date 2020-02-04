@@ -1,5 +1,5 @@
 ## Grove Air Quality Sensor
--------------------------------------------------------------
+  [![Build Status](https://travis-ci.com/Seeed-Studio/Grove_Air_quality_Sensor.svg?branch=master)](https://travis-ci.com/Seeed-Studio/Grove_Air_quality_Sensor)-------------------------------------------------------------
 ![](https://statics3.seeedstudio.com/images/101020021%201.jpg)
 
 [Grove Air Quality Sensor](https://www.seeedstudio.com/Grove-Air-quality-sensor-p-1065.html)
