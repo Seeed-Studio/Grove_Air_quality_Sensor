@@ -29,6 +29,10 @@
 */
 #include "Air_Quality_Sensor.h"
 
+#ifdef USE_TINYUSB
+#include <Adafruit_TinyUSB.h>
+#endif
+
 AirQualitySensor sensor(A0);
 
 void setup(void) {
